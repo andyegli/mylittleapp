@@ -1,0 +1,27 @@
+{
+  "name": "MY-LITTLE-APP",
+  "dockerComposeFile": [
+    "../docker-compose.yml"
+  ],
+  "service": "my-little-app_node",
+  "workspaceFolder": "/app",
+  "extensions": [
+    "dbaeumer.vscode-eslint",
+    "esbenp.prettier-vscode",
+    "ms-azuretools.vscode-docker",
+    "ms-vscode-remote.remote-containers"
+  ],
+  "portsAttributes": {
+    "3000": {
+      "label": "MY-LITTLE-APP",
+      "description": "My Little App",
+      "onAutoForward": "openBrowser"
+    }
+  },
+  "forwardPorts": [
+    3000
+  ],
+  "remoteUser": "node"
+  // "postCreateCommand": "npm install",
+  // "postStartCommand": "npm run dev",
+}
